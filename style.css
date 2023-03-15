@@ -1,0 +1,8 @@
+body {
+    background-color: black;
+}
+
+#labyrinth {
+    position: absolute;
+    clip: rect(0px,170px,200px,0px);
+  }
