@@ -1,8 +1,19 @@
 body {
     background-color: black;
 }
-
+ 
 #labyrinth {
     position: absolute;
+    height: auto;
+    width: auto;
     clip: rect(0px,170px,200px,0px);
+    z-index: 1;
+  }
+  #pacman{
+    position: absolute;
+    top: 144px;
+    left: 88px;
+    height: 10px;
+    width: 10px;
+    z-index: 2;
   }
