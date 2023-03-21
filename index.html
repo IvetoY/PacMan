@@ -1,11 +1,67 @@
 <!DOCTYPE html>
 <html>    
 <head>
-        <link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="stylesheet" type="text/css" href="style.css" />
         <link rel="pacMan" type="text/css" href="style.css" />
+        <link rel="pacManAnimation" type="text/css" href="style.css" />
+        <link rel="pacman(start)" type="text/css" href="style.css" />
+        <script> 
+        type ="text/javascript" 
+            var image = null;
+            function init(){
+                image = document.getElementById("pacmanAnimation");
+                image.style.position="relative";
+                image.style.left = "0px";
+                image.style.top = "0px";
+            }
+            function getKeyAndMove(e){
+                var key_code = e.which || e.keyCode;
+                switch (key_code){
+                    case 37:
+                        moveLeft();
+                        break;
+                    case 38:
+                        moveUp();
+                        break;
+                    case 39:
+                        moveRight();
+                        break;
+                    case 40:
+                        moveDown();
+                        break;
+
+                }
+            }
+            function moveLeft(){
+                if(parseInt(image.style.left)>=0){
+                image.style.left =  parseInt(image.style.left) - 1 + "px";
+                }
+            }
+            function moveUp(){
+                if(parseInt(image.style.top)>=-4)
+                image.style.top =  parseInt(image.style.top) - 1 + "px";
+                
+            }
+            function moveRight(){
+                if(parseInt(image.style.left)<=143){
+                image.style.left =  parseInt(image.style.left) + 1 + "px";
+                }
+            }
+            function moveDown(){
+                if(parseInt(image.style.top)<=162){
+                image.style.top =  parseInt(image.style.top) + 1 + "px";
+                }
+                
+            }
+            window.onload = init;
+
+        </script>
+    
+        
     </head>
-    <body>
-        <img id="labyrinth" src="spritesheet.png" />
-        <img id="pacman" src="pacMan.png" />
-    </body>
+    
+    <body onkeydown="getKeyAndMove(event)">
+       <div> <img id="pacmanAnimation" src="pacManAnimation.gif" /></div>
+        <div><img id="labyrinth" src="spritesheet.png" /></div>
+</body>
 </html>
