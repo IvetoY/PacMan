@@ -23,6 +23,9 @@ body {
     
 
   }
+  #rotatePacMan {
+    transform: rotate(45deg);
+  }
   
  
   
