@@ -2,6 +2,9 @@
 type ="text/javascript"
 
             var image = null;
+            let timeoutId = 0;
+            let movingDirectionKeyCode = 0;
+            const pacmanSpeed = 30;
             function init(){
                 image = document.getElementById("pacmanAnimation");
                 image.style.position="relative";
@@ -11,25 +14,37 @@ type ="text/javascript"
             
             function getKeyAndMove(e){
                 var key_code = e.which || e.keyCode;
+                if(isTheSameDirection(key_code)) return;
                 switch (key_code){
                     case 37:
                         rotateImageLeft();
-                        moveLeft();
+                        clearInterval(timeoutId);
+                        timeoutId = setInterval(moveLeft,pacmanSpeed);
                         break;
                     case 38:
                         rotateImageUp();
-                        moveUp();
+                        clearInterval(timeoutId);
+                        timeoutId = setInterval(moveUp,pacmanSpeed);
                         break;
                     case 39:
                         rotateImageRight();
-                        moveRight();
+                        clearInterval(timeoutId);
+                        timeoutId = setInterval(moveRight,pacmanSpeed);
                         break;
                     case 40:
                         rotateImageDown();
-                        moveDown();
+                        clearInterval(timeoutId);
+                        timeoutId = setInterval(moveDown,pacmanSpeed);
                         break;
 
                 }
+            }
+            function isTheSameDirection(keyCode){
+                if(movingDirectionKeyCode !== keyCode){
+                    movingDirectionKeyCode = keyCode;
+                    return false;
+                }
+                return true;
             }
              function rotateImageDown() {
                 image.style.transform = 'rotate(90deg)';
@@ -44,29 +59,24 @@ type ="text/javascript"
                 image.style.transform = 'rotate(0deg)';
             }
             function moveLeft(){
-                
                 if(parseInt(image.style.left)>=0){
                     image.style.left =  parseInt(image.style.left) - 1 + "px";
-                    setTimeout(moveLeft,70);
             }
             }
             
             function moveUp(){
             if(parseInt(image.style.top)>=-4){
                 image.style.top =  parseInt(image.style.top) - 1 + "px";
-                setTimeout(moveUp,70);
             }
                 }
             function moveRight(){
                 if(parseInt(image.style.left)<=143){
                     image.style.left =  parseInt(image.style.left) + 1 + "px";
-                    setTimeout(moveRight,70);
                 }
             }
             function moveDown(){
                 if(parseInt(image.style.top)<=162){
                     image.style.top =  parseInt(image.style.top) + 1 + "px";
-                    setTimeout(moveDown,70);
                 }  
             }
             window.onload = init;
