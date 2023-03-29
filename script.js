@@ -15,7 +15,6 @@ type ="text/javascript"
                     case 37:
                         rotateImageLeft();
                         moveLeft();
-                        
                         break;
                     case 38:
                         rotateImageUp();
@@ -45,41 +44,29 @@ type ="text/javascript"
                 image.style.transform = 'rotate(0deg)';
             }
             function moveLeft(){
-                if(parseInt(image.style.left)>=0){
-                do{
-                    image.style.left =  parseInt(image.style.left) - 1 + "px";
-                }
-                while(parseInt(image.style.left)>=0);
                 
+                if(parseInt(image.style.left)>=0){
+                    image.style.left =  parseInt(image.style.left) - 1 + "px";
+                    setTimeout(moveLeft,70);
             }
             }
+            
             function moveUp(){
-                    if(parseInt(image.style.top)>=-4){
-                    
-                        do{
-                        image.style.top =  parseInt(image.style.top) - 1 + "px";
-                        }
-                        while(parseInt(image.style.top)>=-4);
-                        
-                        
-                    }
+            if(parseInt(image.style.top)>=-4){
+                image.style.top =  parseInt(image.style.top) - 1 + "px";
+                setTimeout(moveUp,70);
+            }
                 }
             function moveRight(){
                 if(parseInt(image.style.left)<=143){
-                do{
                     image.style.left =  parseInt(image.style.left) + 1 + "px";
-                    
-                    }
-                while(parseInt(image.style.left)<=143);
+                    setTimeout(moveRight,70);
                 }
             }
             function moveDown(){
                 if(parseInt(image.style.top)<=162){
-                do{
                     image.style.top =  parseInt(image.style.top) + 1 + "px";
-                    }
-                while(parseInt(image.style.top)<=162);
-                
+                    setTimeout(moveDown,70);
                 }  
             }
             window.onload = init;
