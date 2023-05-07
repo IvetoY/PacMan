@@ -1,5 +1,7 @@
 body {
     background-color: black;
+    margin: 0;
+
 }
  
 #labyrinth {
@@ -9,7 +11,7 @@ body {
     height: auto;
     width: auto;
     clip: rect(0px,170px,200px,0px);
-    z-index: 1;
+    
   }
 
   #pacmanAnimation{
@@ -23,9 +25,13 @@ body {
     
 
   }
-  #rotatePacMan {
-    transform: rotate(45deg);
-  }
+  canvas{
+    border: 10px rgb(32, 107, 248);
+    z-index: 1;
+}
+
+
+
   
  
   

@@ -1,6 +1,5 @@
 
 type ="text/javascript"
-
             var image = null;
             let timeoutId = 0;
             let movingDirectionKeyCode = 0;
