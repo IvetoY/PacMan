@@ -1,17 +1,13 @@
-# 15 March
+# 7 May
 
-* began on 14 March
 * Today
-  * Clarified that we will work w/ the classic spritesheet `done`
-  * Showed the labyrinth `done`
+  * We reviewd the progress.
+    * The progress using canvas is v good.
+  * We discussed again the approach from https://dahoum.wales/the-pacman-as-a-nursery-32ba07b282b1 and agreed that we will re-start the project w/o canvas and w/o animated PacMan, and we will not use CSS animation.
 * Homework
-  * See how can you show one pacmaon on top of the labyrinth `done` on 16 March
-    * How to place an image on top of another image `done` on 16 March
-  
-
-  * on 21 March
-   added motion to the image (with arrow keys)
-
-  * on 27 March
-  rotate the photo in the direction of movement
-  added limits for movement along the edges of the labyrinth
+  * Show only the part of the labyrinth w/ the dots.
+  * Show one phase of the PacMan on top of it.
+  * Re-wire the movement of the PacMan w/ the keyboard.
+  * Think how to animate the PacMan using the phases/ costumes on the spritesheet and JavaScript (no CSS animations).
+* w/ T. E. weekly w/ mentor more often
+* We began on 14 March 2023
