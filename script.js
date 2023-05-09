@@ -5,7 +5,7 @@ type ="text/javascript"
             let movingDirectionKeyCode = 0;
             const pacmanSpeed = 30;
             function init(){
-                image = document.getElementById("pacmanAnimation");
+                image = document.getElementById('pacManAnimation');
                 image.style.position="relative";
                 image.style.left = "0px";
                 image.style.top = "0px";

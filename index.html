@@ -1,22 +1,15 @@
 <!DOCTYPE html>
 <html>    
 <head>
-<link rel="stylesheet" type="text/css" href="style.css" />
-        <link rel="pacMan" type="text/css" href="style.css" />
-        <link rel="pacManAnimation" type="text/css" href="style.css" />
-        <link rel="pacman(start)" type="text/css" href="style.css" />
-        
-        <script src = "script.js"> </script>
+<link rel="stylesheet" type="text/css" href = "style.css" />
+<link rel="pacManAnimation" type="text/css" href="style.css" />
 
+<script> src="script.js"</script> 
 </head>
+<body onkeydown = "getKeyAndMove(event)">
+<img id="labyrinth" src="spritesheet.png" />
+<div><img id="pacManAnimation" src="pacManAnimation.gif"/></div> 
     
-    <body onkeydown="getKeyAndMove(event)">
-        <canvas id = "canvas">
-                
-        </canvas> 
-        <script src = "canvas.js"></script>
-         
-        <div> <img id="pacmanAnimation" src="pacManAnimation.gif" /></div>
-   
+        
 </body>
 </html>
