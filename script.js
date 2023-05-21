@@ -9,7 +9,7 @@ type ="text/javascript"
                 image.style.position="relative";
                 image.style.left = "0px";
                 image.style.top = "0px";
-            }
+            };
             
             function getKeyAndMove(e){
                 var key_code = e.which || e.keyCode;
@@ -37,45 +37,45 @@ type ="text/javascript"
                         break;
 
                 }
-            }
+            };
             function isTheSameDirection(keyCode){
                 if(movingDirectionKeyCode !== keyCode){
                     movingDirectionKeyCode = keyCode;
                     return false;
                 }
                 return true;
-            }
+            };
              function rotateImageDown() {
                 image.style.transform = 'rotate(90deg)';
-              }
+              };
             function rotateImageUp(){
                 image.style.transform = 'rotate(-90deg)';
-            }
+            };
             function rotateImageLeft() { 
                 image.style.transform = 'rotate(180deg)';
-              }
+              };
             function rotateImageRight(){ 
                 image.style.transform = 'rotate(0deg)';
-            }
+            };
             function moveLeft(){
-                if(parseInt(image.style.left)>=0){
+                if(parseInt(image.style.left)>=2){
                     image.style.left =  parseInt(image.style.left) - 1 + "px";
             }
-            }
+            };
             
             function moveUp(){
-            if(parseInt(image.style.top)>=-4){
+            if(parseInt(image.style.top)>=2){
                 image.style.top =  parseInt(image.style.top) - 1 + "px";
             }
-                }
+                };
             function moveRight(){
-                if(parseInt(image.style.left)<=143){
+                if(parseInt(image.style.left)<=150){
                     image.style.left =  parseInt(image.style.left) + 1 + "px";
                 }
-            }
+            };
             function moveDown(){
-                if(parseInt(image.style.top)<=162){
+                if(parseInt(image.style.top)<=170){
                     image.style.top =  parseInt(image.style.top) + 1 + "px";
                 }  
-            }
+            };
             window.onload = init;
